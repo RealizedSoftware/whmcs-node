@@ -12,7 +12,7 @@ export interface UpdateClientAddonRequest {
   notes?: string;
 }
 
-export class UpdateClientAddonResponse {
+export interface UpdateClientAddonResponse {
   result: string;
   id: number;
 }

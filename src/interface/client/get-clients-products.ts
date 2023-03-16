@@ -17,7 +17,9 @@ export interface GetClientsProductsResponse {
     totalresults: number;
     startnumber: number;
     numreturned: number;
-    products: Product[];
+    products: {
+        product: Product[]
+    };
 }
 
 export interface Product {
@@ -38,7 +40,7 @@ export interface Product {
     serverhostname: string;
     suspensionreason: string;
     firstpaymentamount: number;
-    recurringamount: number;
+    recurringamount: string;
     paymentmethod: string;
     paymentmethodname: string;
     billingcycle: string;

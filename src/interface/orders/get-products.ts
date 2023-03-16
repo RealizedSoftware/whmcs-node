@@ -1,15 +1,15 @@
 export interface GetProductsRequest {
   pid?: string;
-  gid: number;
-  module: string;
+  gid?: string;
+  module?: string;
 }
 
 export interface GetProductsResponse {
   result: string;
   totalresults: number;
-  startnumber; number;
+  startnumber: number;
   numreturned: number;
-  products: Product[];
+  products: { product: Product[] };
 }
 
 export interface Product {
