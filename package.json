@@ -32,5 +32,9 @@
   "homepage": "https://github.com/shockbyte/whmcs-node#readme",
   "dependencies": {
     "got": "^11.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.14.9",
+    "typescript": "^4.9.4"
   }
 }
