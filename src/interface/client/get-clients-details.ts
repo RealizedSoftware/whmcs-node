@@ -64,8 +64,14 @@ export interface Client {
     language: string;
     isOptedInToMarketingEmails: boolean;
     lastlogin: string;
+    customfields: CustomFieldValue[],
     currency_code: string;
     users: User[]
+}
+
+export interface CustomFieldValue {
+    id: number,
+    value: string
 }
 
 export interface User {
@@ -76,18 +82,18 @@ export interface User {
 }
 
 export interface Stats {
-    numdueinvoices: number 
+    numdueinvoices: number
     dueinvoicesbalance: string
     incredit: boolean
-    creditbalance: string 
+    creditbalance: string
     grossRevenue: string
     expenses: string
     income: string
-    numoverdueinvoices: number 
+    numoverdueinvoices: number
     overdueinvoicesbalance: string
     numDraftInvoices: number
     draftInvoicesBalance: string
-    numunpaidinvoices: number 
+    numunpaidinvoices: number
     unpaidinvoicesamount: string
     numpaidinvoices: number
     paidinvoicesamount: string

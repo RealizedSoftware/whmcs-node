@@ -1,5 +1,4 @@
 import got from 'got';
-import WhmcsApi from '..';
 import { WhmcsSetupOptions } from '../interface/whmcs.setup.options';
 
 export abstract class BaseModule {

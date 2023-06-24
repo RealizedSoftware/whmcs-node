@@ -12,10 +12,12 @@ export interface GetInvoicesResponse {
   totalresults: number;
   startnumber: number;
   numreturned: number;
-  invoices: Invoices[];
+  invoices: {
+    invoice: Invoice[]
+  };
 }
 
-export interface Invoices {
+export interface Invoice {
   id: number;
   userid: number;
   firstname: string;
@@ -25,7 +27,7 @@ export interface Invoices {
   date: Date;
   duedate: Date;
   datepaid: Date;
-  subtotal: number;
+  subtotal: string;
   credit: number;
   tax: number;
   tax2: number;

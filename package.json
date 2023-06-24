@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && tsc-alias"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shockbyte/whmcs-node.git"
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@types/node": "^15.14.9",
+    "tsc-alias": "^1.8.6",
     "typescript": "^4.9.4"
   }
 }

@@ -1,5 +1,5 @@
 export interface AddClientRequest {
-    owner_user_id: number;
+    owner_user_id?: number;
     firstname: string;
     lastname: string;
     companyname?: string;
