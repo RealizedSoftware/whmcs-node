@@ -22,7 +22,7 @@ export interface GetInvoiceResponse {
   paymentmethod: string;
   notes: string;
   ccgateway: boolean;
-  items: Item[];
+  items: {item: Item[]};
   transactions: string[];
 }
 
