@@ -9,12 +9,12 @@ export interface UpdateInvoiceRequest {
   duedate?: string;
   datepaid?: string;
   notes?: string;
-  itemdescription?: string[];
-  itemamount?: number[];
-  itemtaxed?: boolean[];
-  newitemdescription?: string[];
-  newitemamount?: number[];
-  newitemtaxed?: boolean[];
+  itemdescription?: {[key: number]: string};
+  itemamount?: {[key: number]: number};
+  itemtaxed?: {[key: number]: boolean};
+  newitemdescription?: {[key: number]: string};
+  newitemamount?: {[key: number]: number};
+  newitemtaxed?: {[key: number]: boolean};
   deletelineids?: number[];
   publish?: boolean;
   publichandsendemail?: boolean;
