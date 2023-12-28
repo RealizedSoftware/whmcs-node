@@ -30,7 +30,7 @@ export interface Item {
   id: number;
   type: string;
   relid: number;
-  description: number;
+  description: string;
   amount: number;
-  taxed: number;
+  taxed: boolean;
 }
