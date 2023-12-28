@@ -1,25 +1,22 @@
 # whmcs-node
 
-A Typescript/Javascript API wrapper for WHMCS.
+A Typescript ESM API wrapper for WHMCS 8.0.
 
-## Example use
+### Installation
+Install and save to dependencies  
+`npm i -S @pulsar-networks/whmcs`
 
-`npm i whmcs-node`
+### Example use
+```ts
+import WhmcsApi from '@pulsar-networks/whmcs';
 
-```js
-// typescript
-import 'WhmcsApi' from 'whmcs-node';
-
-// javascript
-const WhmcsApi = require('whmcs-node').default
-
-const whmcs = new WhmcsApi({
+const whmcsApi = new WhmcsApi({
   identifier: "",
   secret: "",
   apiUrl: "https://example.com/billing/includes/api.php"
 });
 
-whmcs.tickets.getTicketCounts({})
+whmcsApi.tickets.getTicketCounts({})
   .then((data) => console.log(data))
   .catch((err) => console.error(err))
 ```
