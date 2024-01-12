@@ -23,6 +23,8 @@ import { UpdateInvoiceRequest, UpdateInvoiceResponse } from "../interface/billin
 import { UpdatePayMethodRequest, UpdatePayMethodResponse } from "../interface/billing/update-pay-method";
 import { UpdateQuoteRequest, UpdateQuoteResponse } from "../interface/billing/update-quote";
 import { UpdateTransactionRequest, UpdateTransactionResponse } from "../interface/billing/update-transaction";
+import {objectToPhpPostCompatible} from '../lib/PhpAdapter';
+import * as console from 'console';
 
 export class WhmcsBillingService extends BaseModule {
 
@@ -107,7 +109,7 @@ export class WhmcsBillingService extends BaseModule {
   }
 
   public async updateInvoice(options: UpdateInvoiceRequest): Promise<UpdateInvoiceResponse> {
-    return this.request('UpdateInvoice', options);
+    return this.request('UpdateInvoice', objectToPhpPostCompatible(options));
   }
 
   public async updatePayMethod(options: UpdatePayMethodRequest): Promise<UpdatePayMethodResponse> {
