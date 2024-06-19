@@ -11,7 +11,10 @@ export interface GetOrdersResponse {
   totalresults: number;
   startnumber: number;
   numreturned: number;
-  orders: Order[];
+  orders: {
+    orders: Order[]
+  };
+
 }
 
 export interface Order {
