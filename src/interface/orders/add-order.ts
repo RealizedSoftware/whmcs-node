@@ -45,8 +45,8 @@ export interface AddOrderRequest {
 export interface AddOrderResponse {
     result: string;
     orderid: number;
-    serviceids: string;
-    addonids: string;
-    domainids: string;
+    serviceids: number[];
+    addonids: number[];
+    domainids: number[];
     invoiceid: number;
 }

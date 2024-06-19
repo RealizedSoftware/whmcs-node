@@ -1,7 +1,7 @@
 {
   "name": "@pulsar-networks/whmcs",
-  "version": "1.1.2",
-  "description": "",
+  "version": "1.1.7",
+  "description": "A Typescript ESM API wrapper for WHMCS 8.0.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

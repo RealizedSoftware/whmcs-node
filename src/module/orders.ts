@@ -18,7 +18,26 @@ export class WhmcsOrdersService extends BaseModule {
   }
 
   public async addOrder(options: AddOrderRequest): Promise<AddOrderResponse> {
-    return this.request('AddOrder', options)
+
+    const response: {
+      result: string;
+      orderid: number;
+      serviceids: string;
+      addonids: string;
+      domainids: string;
+      invoiceid: number;
+    } = await this.request('AddOrder', options)
+
+    const correctResponse: AddOrderResponse = {
+      result: response.result,
+      orderid: response.orderid,
+      serviceids: response.serviceids.split(',').map((id) => parseInt(id)),
+      addonids: response.addonids.split(',').map((id) => parseInt(id)),
+      domainids: response.domainids.split(',').map((id) => parseInt(id)),
+      invoiceid: response.invoiceid,
+    }
+
+    return correctResponse
   }
 
   public async cancelOrder(options: CancelOrderRequest): Promise<CancelOrderResponse> {
