@@ -12,7 +12,7 @@ export interface GetOrdersResponse {
   startnumber: number;
   numreturned: number;
   orders: {
-    orders: Order[]
+    order: Order[]
   };
 
 }
