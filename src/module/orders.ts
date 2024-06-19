@@ -31,11 +31,17 @@ export class WhmcsOrdersService extends BaseModule {
     const correctResponse: AddOrderResponse = {
       result: response.result,
       orderid: response.orderid,
-      serviceids: response.serviceids.split(',').map((id) => parseInt(id)),
-      addonids: response.addonids.split(',').map((id) => parseInt(id)),
-      domainids: response.domainids.split(',').map((id) => parseInt(id)),
+      serviceids: response.serviceids
+          ? response.serviceids.split(',').map((id) => parseInt(id)).filter((id) => !isNaN(id))
+          : [],
+      addonids: response.addonids
+          ? response.addonids.split(',').map((id) => parseInt(id)).filter((id) => !isNaN(id))
+          : [],
+      domainids: response.domainids
+          ? response.domainids.split(',').map((id) => parseInt(id)).filter((id) => !isNaN(id))
+          : [],
       invoiceid: response.invoiceid,
-    }
+    };
 
     return correctResponse
   }
